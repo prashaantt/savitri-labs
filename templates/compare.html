@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    {% include "footer_links.html" %}
+	 {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="stats">
+    <p>
+    	{% if stats %}
+        <ul>
+            {% for stati in stats %}
+                    <li>{{ stati }}</li>
+            {% endfor %}
+        </ul>
+    	{% endif %}
+    </p>
+</div>
+
+</body>
+</html>

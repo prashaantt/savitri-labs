@@ -1,0 +1,33 @@
+ <html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    {% include "footer_links.html" %}
+	 {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br/><br/><br/><br/>
+ <form action="/stats/" method="get">
+        Enter Canto Number<input type="text" name="q">
+        <input type="submit" value="Go">
+    </form>
+    <!-- <p>You searched for: Canto Number  <strong>{{ canto_number }}</strong></p> -->
+    <div class="stats">
+    <p>
+    	{% if statistics %}
+        <ul>
+            {% for stat in statistics %}
+            <li>{{ stat }}</li>
+            {% endfor %}
+        </ul>
+    	{% endif %}
+    </p>
+</div>
+
+</body>
+</html>
